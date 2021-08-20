@@ -1,6 +1,7 @@
 # Real World Vue3
 
 This is a static web app built with vue3, example from VueMastery.
+P.S. This app uses Client-Side routing using History Mode turned on, so you'll need to configure your server in order to redirect all routes to `index.html`.
 
 ## Project setup
 ```
