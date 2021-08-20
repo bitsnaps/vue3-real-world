@@ -1,4 +1,6 @@
-# real-world-vue3
+# Real World Vue3
+
+This is a static web app built with vue3, example from VueMastery.
 
 ## Project setup
 ```
