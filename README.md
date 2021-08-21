@@ -3,6 +3,9 @@
 This is a static web app built with vue3, example from VueMastery.
 P.S. This app uses Client-Side routing using History Mode turned on, so you'll need to configure your server in order to redirect all routes to `index.html`.
 
+## Hosting as a static app
+You can host this app as a static web pages on Netlify or Vercel or Render, all you need to do is to configure the server to handle redirect all routes to `index.html` page. In [Netlify](https://docs.netlify.com/routing/redirects/rewrites-proxies/#history-pushstate-and-single-page-apps) you'll need to created and configure this file: `public/_redirects` to do that.
+
 ## Project setup
 ```
 npm install
@@ -17,6 +20,7 @@ npm run serve
 ```
 npm run build
 ```
+P.S. This will generate `dist` directory which will be used to host your app.
 
 ### Lints and fixes files
 ```
