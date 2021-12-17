@@ -15,6 +15,10 @@ npm install
 ```
 npm run serve
 ```
+Notes:
+- Don't forget to run `json-server db.json` before running the app.
+- You must have installed `json-server` using `npm` globally.
+- This will serve `db.json` file on `http://localhost:3000` locally into your machine.
 
 ### Compiles and minifies for production
 ```
