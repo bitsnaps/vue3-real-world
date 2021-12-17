@@ -29,3 +29,5 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+Source: https://www.vuemastery.com/courses/real-world-vue3
