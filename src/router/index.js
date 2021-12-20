@@ -7,6 +7,7 @@ import EventEdit from '../views/event/Edit.vue'
 import About from '../views/About.vue'
 import NotFound from '../views/NotFound.vue'
 import NetworkError from '../views/NetworkError.vue'
+import NProgress from 'nprogress'
 
 const routes = [
   {
@@ -35,6 +36,7 @@ const routes = [
         path: 'edit',
         name: 'EventEdit',
         component: EventEdit,
+        /* meta: { requireAuth: true} */
       },
     ],
   },
@@ -76,6 +78,25 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  },
+})
+
+router.beforeEach(() => {
+  //router.beforeEach((to, from) => {
+  NProgress.start()
+  /* Here is how you can do route authorization*/
+  // const notAuthorized = true
+  // if (to.meta.requireAuth && notAuthorized){}
+})
+
+router.afterEach(() => {
+  NProgress.done()
 })
 
 export default router
