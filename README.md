@@ -35,3 +35,9 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Source: https://www.vuemastery.com/courses/real-world-vue3
+
+## Installed packages:
+In this branch we've installed NProgress package:
+```
+npm install nprogress
+```
