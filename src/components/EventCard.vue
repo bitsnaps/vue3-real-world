@@ -17,8 +17,6 @@ export default {
   props: {
     event: Object,
   },
-  // data() {
-  // }
 }
 </script>
 
