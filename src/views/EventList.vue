@@ -10,7 +10,7 @@
       <EventCard data-testid="event" :event="event" />
     </router-link>
 
-    <div class="pagination">
+    <!-- <div class="pagination">
       <router-link
         id="page-prev"
         :to="{ name: 'EventList', query: { page: page - 1 } }"
@@ -26,13 +26,13 @@
         v-if="hasNextPage"
         >Next &#62;</router-link
       >
-    </div>
+    </div> -->
   </div>
 </template>
 
 <script>
 import EventCard from '@/components/EventCard.vue'
-import EventService from '@/services/EventService.js'
+// import EventService from '@/services/EventService.js'
 
 export default {
   name: 'EventList',
@@ -40,7 +40,15 @@ export default {
   components: {
     EventCard,
   },
-  data() {
+  created() {
+    this.$store.dispatch('fetchEvents').catch((error) => {
+      this.$router.push({
+        name: 'ErrorDisplay',
+        params: { error: error },
+      })
+    })
+  },
+  /*  data() {
     return {
       events: null,
       totalEvents: 0,
@@ -67,12 +75,15 @@ export default {
       .catch(() => {
         return { name: 'NetworkError' }
       })
-  },
+  },*/
   computed: {
-    hasNextPage() {
+    events() {
+      return this.$store.state.events
+    },
+    /*    hasNextPage() {
       var totalPages = Math.ceil(this.totalEvents / 2)
       return this.page < totalPages
-    },
+    },*/
   },
 }
 </script>
