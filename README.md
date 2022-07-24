@@ -41,3 +41,9 @@ In this branch we've installed NProgress package:
 ```
 npm install nprogress
 ```
+
+## Unit Testing
+Install the official dependency plugin:
+```
+vue add unit-jest
+```
