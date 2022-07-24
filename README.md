@@ -60,3 +60,7 @@ and then run the unit tests:
 ```
 npm run test:unit
 ```
+If you want to use Mock Service Worker, you can install:
+```
+npm install msw -D
+```
