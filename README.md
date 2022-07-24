@@ -47,3 +47,16 @@ Install the official dependency plugin:
 ```
 vue add unit-jest
 ```
+The plugin will setup config files and creates a dummy HelloWorld compoenent testing in `tests/unit/example.spec.js` file.
+You can delete this unit test or replace it with the simplest unit test example:
+```js
+describe('My Component', () => {
+  it('renders successuflly', () => {
+    expect(true).toBe(true)
+  })
+})
+```
+and then run the unit tests:
+```
+npm run test:unit
+```
