@@ -64,3 +64,7 @@ If you want to use Mock Service Worker, you can install:
 ```
 npm install msw -D
 ```
+After setup MSW and it's handlers, you can run a mock test (e.g. `smoke.spec.js`) in a watch mode using `npx`:
+```
+npx jest smoke --watch
+```
