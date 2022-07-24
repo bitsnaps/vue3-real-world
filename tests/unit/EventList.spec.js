@@ -41,9 +41,6 @@ describe('EventList', () => {
     })
   })
 
-  /**
-   * In this specific repo, we're not using the store, so this test should fail.
-   */
   describe('events', () => {
     it('are rendered in a list with necessary information', () => {
       // Retrieved from to db.json

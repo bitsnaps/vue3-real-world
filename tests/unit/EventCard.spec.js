@@ -21,4 +21,3 @@ describe('EventCard', () => {
     expect(wrapperHtml).toContain(event.title)
   })
 })
-
