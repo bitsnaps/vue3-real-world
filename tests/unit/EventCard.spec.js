@@ -9,11 +9,15 @@ describe('EventCard', () => {
       date: 'September 29th, 2022',
       title: 'Coaching Little League',
     }
-    mount(EventCard, {
+    const wrapper = mount(EventCard, {
       props: {
         event,
       },
     })
-    expect(true).toBe(true)
+    const wrapperHtml = wrapper.html()
+
+    expect(wrapperHtml).toContain(event.date)
+    expect(wrapperHtml).toContain(event.time)
+    expect(wrapperHtml).toContain(event.title)
   })
 })
